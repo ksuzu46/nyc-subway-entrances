@@ -5,7 +5,7 @@ tree, and it creates disjoint sets of stations. Two stations are connected if
 they have free transfer which means station has same set of routes and the 
 distance between them is less than 0.28km by the definition in the project
 specification. The dataset holds info such as station name, line name, 
-route name, corner, GPS info of station and entrance, and etc. Three are 
+route name, corner, GPS info of station and entrance, and etc. There are 
 main program, and class SubwaySystem,SubwayStation, SubwayPortal, SubwayRoute, 
 HashTable, HashItem, and GPS.
 
