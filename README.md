@@ -13,21 +13,21 @@ HashTable, HashItem, and GPS.
 
 #### Provided files:
 
-main.o           -A binally o.file of main program which handles getting line of 
+main.o:           A binally o.file of main program which handles getting line of 
                   the CVS file, it also processes the command argument specified 
                   by the project instruction linked below.
 
-subway_route.h   -A interface file for SubwayRoute class whose implementation
+subway_route.h:   A interface file for SubwayRoute class whose implementation
                   is given as an o.file  
                  
-subway_route.o   -A banally o.file of SubwayRoute class which stores bit_mask
+subway_route.o:   A banally o.file of SubwayRoute class which stores bit_mask
                   which indicates the route, and Indexes of parent tree where
                   the station is stored.
 
-_subway_system.h -A interface file that has _SubwaySystem class that specifies
+_subway_system.h: A interface file that has _SubwaySystem class that specifies
                   minimal requirement for SubwaySystem which derives that class.
 
-_subway_portal.h -A interface file that has _SubwayPortal class that specifies
+_subway_portal.h: A interface file that has _SubwayPortal class that specifies
                   minimal requirement for SubwayPortal. Renamed this filed 
                   as SubwayPortal to not have to derive the class.
 
