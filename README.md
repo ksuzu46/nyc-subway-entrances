@@ -1,4 +1,6 @@
-Detailed project instruction link below 
+## [Click here to see ditailed project specification](http://www.compsci.hunter.cuny.edu/~sweiss/course_materials/csci335/assignments_s19/project2_phase2.pdf)
+
+### Brief Instruction
 
 A School project which processes a dataset of NYC subway entrances using parent
 tree, and it creates disjoint sets of stations. Two stations are connected if 
@@ -9,7 +11,7 @@ route name, corner, GPS info of station and entrance, and etc. There are
 main program, and class SubwaySystem,SubwayStation, SubwayPortal, SubwayRoute, 
 HashTable, HashItem, and GPS.
 
-Provided files:
+#### Provided files:
 
 main.o           -A binally o.file of main program which handles getting line of 
                   the CVS file, it also processes the command argument specified 
@@ -29,7 +31,5 @@ _subway_portal.h -A interface file that has _SubwayPortal class that specifies
                   minimal requirement for SubwayPortal. Renamed this filed 
                   as SubwayPortal to not have to derive the class.
 
-project specification:
-http://www.compsci.hunter.cuny.edu/~sweiss/course_materials/csci335/assignments_s19/project2_phase2.pdf
 
            
