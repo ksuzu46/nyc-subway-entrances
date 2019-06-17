@@ -11,6 +11,11 @@ route name, corner, GPS info of station and entrance, and etc. There are
 main program, and class SubwaySystem,SubwayStation, SubwayPortal, SubwayRoute, 
 HashTable, HashItem, and GPS.
 
+NOTE:In SubwayStations and SubwaySystem class, some of the member variables are
+declared as raw pointers because when destructors in STL containers called, their 
+location was already freed because the main program calls destructor of those 
+classes. Worked without errors by allocating them dynamically.  
+
 #### Provided files:
 
 main.o:           A binally o.file of main program which handles getting line of 
