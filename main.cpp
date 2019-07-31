@@ -8,7 +8,10 @@
                    commands to the subway entrance data.
   Usage          : project3  datafile  commandfile
   Build with     : g++ -o project3 main.cpp
-  Modifications  :
+
+  Modifications  : made by Keisuke Suzuki on 7/31/2019
+  	           Added " break" in command reading while loop, and a new line
+		   to command files so that it does not ignore the last command  
 
 *******************************************************************************/
 
