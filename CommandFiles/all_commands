@@ -1,0 +1,24 @@
+list_all_stations
+list_station_portals 4 Avenue-36th St
+list_station_portals 63rd Street-Lexington Av
+list_station_portals Lexington-103rd St
+list_station_portals Clark-Fulton St
+list_station_portals 8 Avenue-81st St - Museum of Natural History
+list_station_portals Broadway-7th Ave-Times Square
+list_route_stations 7
+list_route_stations A
+list_route_stations F
+list_route_stations FS
+list_route_stations GS
+list_route_stations H
+list_routes  7th Ave,40th St,SW,2
+list_routes Broadway,43rd St,SW,2
+list_routes  6th Ave,32nd St,NW,2
+list_routes  Park Ave,42nd St,SE,4
+nearest_portal 40.595 -73.85
+nearest_portal 40.91 -73.86
+nearest_portal 40.72  -73.8
+nearest_portal 40.768 -73.963
+nearest_routes 40.595 -73.85
+nearest_routes 40.91 -73.86
+nearest_routes 40.768 -73.963
