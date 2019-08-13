@@ -1,7 +1,7 @@
 <h1 align="center">NYCSubwayEntrances</h1>
 <br>
 <p align="center"><strong>Description</strong>
-<p align="center">A School project processes a dataset of NYC subway 
+<p align="center">This project processes a dataset of NYC subway 
 entrances which has almost all entrances of subway stations in NYC. 
  It will allow user to obtain information about selected aspects of 
  data, such as which route is the nearest from a GPS point entered by an
@@ -16,7 +16,7 @@ entrances which has almost all entrances of subway stations in NYC.
 > **list_route_stations** *route_identifier*
 > > Lists the station_names of all subway stations that service the
 > > given route. The route identifier is case insensitive - either upper
-> > or lower case should identify a route, e.g. A and a specify the
+> > or lower case should identify a route, e.g. "A" and "a" specify the
 > > A route.
 
 >  **list_all_stations** 
