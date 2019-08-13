@@ -1,27 +1,21 @@
 cmake_minimum_required(VERSION 3.12)
-project(sw3)
+project(NYCSubwayEntrances)
+
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=gnu++11 -Wall -Wextra")
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${BINARY_DIR} "../bin")
+
+file(GLOB_RECURSE NYCSubwayEntrances_SOURCES "src/*.cpp")
+file(GLOB_RECURSE NYCSubwayEntrances_HEADERS "src/*.h")
 
 
-set(CMAKE_CXX_STANDARD 11)
+set (NYCTreeInfo_INCLUDE_DIRS "")
+foreach (_headerFile ${NYCSubwayEntrances_HEADERS})
+    get_filename_component(_dir ${_headerFile} PATH)
+    list (APPEND NYCSubwayEntrances_INCLUDE_DIRS ${_dir})
+endforeach()
+list(REMOVE_DUPLICATES NYCSubwayEntrances_INCLUDE_DIRS)
+
+add_executable (NYCSubwayEntrancesExe ${NYCSubwayEntrances_SOURCES})
 
 
-include_directories(PUBLIC ${Tests})
-include_directories(PRIVATE ${Command})
-include_directories(PRIVATE ${GPS})
-include_directories(PRIVATE ${HashItem})
-include_directories(PRIVATE ${HashTable})
-include_directories(PRIVATE ${SubwayPortal})
-include_directories(PRIVATE ${SubwayRoute})
-include_directories(PRIVATE ${SubwayStation})
-include_directories(PRIVATE ${SubwaySystem})
-
-set(SOURCES main.cpp Command/command.cpp HashItem/_hash_item.cpp
-        HashTable/hash_table.cpp
-        GPS/gps.cpp SubwaySystem/subway_system.cpp
-        SubwayPortal/subway_portal.cpp
-        SubwayStation/subway_station.cpp SubwayRoute/subway_route.cpp
-        )
-
-add_executable(sw3 ${SOURCES})
-
-add_library(subways ${SOURCES})
