@@ -107,7 +107,4 @@ class SubwayStation{
     SubwayPortal portal;                   //embedded portal
 };
 
-
-
-
 #endif //SW2_SUBWAY_STATION_H

@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.12)
 project(NYCSubwayEntrances)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=gnu++11 -Wall -Wextra")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17 -Wall --pedantic-error")
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${BINARY_DIR} "../bin")
 

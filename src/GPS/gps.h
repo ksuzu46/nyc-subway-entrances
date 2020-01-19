@@ -8,7 +8,7 @@
 #include <cstdio>
 #include <iostream>
 #include <string>
-#include<exception>
+#include <exception>
 using namespace std;
 
 #ifndef __GPS_H__

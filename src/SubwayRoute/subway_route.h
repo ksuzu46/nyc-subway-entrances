@@ -28,7 +28,7 @@ typedef  string route_id;
 #define  NUM_ROUTES_MAX  64
 #define  BAD_ROUTE_ID    63
 #define  MAX_ROUTES 35
-#define DEBUG(x) {std::cout<<x<<endl;}
+#define  DEBUG(x) {std::cout<<x<<endl;}
 
 const vector<route_id> id({"1","2","3","4","5","6","7","A","B","C","D","E","F",
                            "G","H","I","J","K","L","M","N","O","P","Q","R","S",
