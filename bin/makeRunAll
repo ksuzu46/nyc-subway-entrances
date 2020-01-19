@@ -1,7 +1,7 @@
 #!/bin/bash
 
 EXE=./bin/exe
-IN_FILE=inputfiles/subwaydata_newstationnames.csv
+IN_FILE=input-files/subwaydata_newstationnames.csv
 nl='
 '
 
@@ -9,8 +9,8 @@ touch temp.txt
 
 #create a temp file for storing commands
 
-#loop files in commandfiles
-for file in commandfiles/*; do
+#loop files in command-files
+for file in command-files/*; do
     cat $file >> temp.txt
   done
 
@@ -18,7 +18,7 @@ echo $nl
 echo "running all commands...$nl"
 
 #execute the program
-echo "reading inputfile... $nl"
+echo "reading input-file... $nl"
 $EXE $IN_FILE temp.txt
 
 rm temp.txt

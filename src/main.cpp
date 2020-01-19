@@ -30,12 +30,12 @@
 #include <climits>
 
 
-#include "Command/command.h"
-#include "GPS/gps.h"
-#include "HashItem/_hash_item.h"
-#include "HashTable/hash_table.h"
-#include "SubwaySystem/_subway_system.h"
-#include "SubwaySystem/subway_system.h"
+#include "command/command.h"
+#include "gps/gps.h"
+#include "hash-item/_hash_item.h"
+#include "hash-table/hash_table.h"
+#include "subway-system/_subway_system.h"
+#include "subway-system/subway_system.h"
 
 
 using namespace std;
@@ -45,7 +45,7 @@ Data Dictionary for Input File:
  Position   Type   Name        Description
  1          uint   ObjectID    Unique identifier for subway entrance
  3          string Name        Name of this station (actually its address)
- 4          string The_Geom    GPS coordinates of the form POINT(decimal decimal)
+ 4          string The_Geom    gps coordinates of the form POINT(decimal decimal)
                                where first is longitude and second, latitude
  5          string Line        Representation of lines accessed at this entrance
                                See the assignment spec for details.
@@ -53,7 +53,7 @@ Data Dictionary for Input File:
  ******************************************************************************/
 
 /******************************************************************************
-Commands:
+commands:
 
 list_route_stations route_identifier
     Lists the station_names of all subway stations that service the given route.

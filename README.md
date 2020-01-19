@@ -49,59 +49,40 @@ entrances which has almost all entrances of subway stations in NYC.
 
 <h2>Usage</h2>
 
-1. download this project as zip and extract it to preferred location
+1. Download and extract or clone this repository, and cd into the directory.
+2. There are two ways to build the project.
+    - Using cmake:
+        ```shell
+        mkdir  build  &&  cd  build
+        ```
+        ```shell
+        cmake.. && make
+        ```
+    - Using make:
+        ```shell
+        make
+        ```
+3. Set PATH to bin: <pre> cd ..  &&  export  PATH=$PATH:$PWD/bin</pre>
+4. Execute the program:
+    - If the project is build by cmake:
+        - To run all the commands in command-file by typing:
+            ```shell
+            runAll
+            ```
+        - or run a custom command defined above:
+            ``` shell
+            NYCSubwayEntrancesExe [InputFilePath] [CommandFilePath]
+            ```
+    - If the project is build by make:
+        - To run all the commands in command-file by typing:
+            ```shell
+            make run
+            ```
+        - or run a custom command:
+            ```
+            exe [InputFilePath] [CommandFilePath]
+            ```
 
-2. cd into the location and type: <pre> mkdir  build  &&  cd  build</pre>
-3. compile and link by typing: <pre> cmake ..  &&  make</pre>
-4. set PATH to bin: <pre> cd ..  &&  export  PATH=$PATH:$PWD/bin</pre>
-5. execute the program:
-   *  with all commands in commandfile by typing: <pre> runAll </pre>
-   * or run custom command defined above: <pre> NYCSubwayEntrancesExe <*InputFilePath*> <*CommandFilePath*> </pre>
-         
-<h2>Directory Structure</h2>
-<br>
-<pre>
-.
-├── bin
-│   └── runAll
-├── CMakeLists.txt
-├── commandfiles
-├── inputfiles
-├── main.cpp
-├── README.md
-├── src
-│   ├── Command
-│   │   ├── command.cpp
-│   │   └── command.h
-│   ├── GPS
-│   │   ├── gps.cpp
-│   │   └── gps.h
-│   ├── HashItem
-│   │   ├── _hash_item.cpp
-│   │   └── _hash_item.h
-│   ├── HashTable
-│   │   ├── hash_table.cpp
-│   │   ├── _hash_table.h
-│   │   └── hash_table.h
-│   ├── SubwayPortal
-│   │   ├── subway_portal.cpp
-│   │   └── subway_portal.h
-│   ├── SubwayRoute
-│   │   ├── subway_route.cpp
-│   │   └── subway_route.h
-│   ├── SubwayStation
-│   │   ├── subway_station.cpp
-│   │   └── subway_station.h
-│   └── SubwaySystem
-│       ├── subway_system.cpp
-│       ├── _subway_system.h
-│       └── subway_system.h
-└── Tests
-    ├── BasicTests
-    │   ├── basic_check.cpp
-    │   └── CMakeLists.txt
-    └── CMakeLists.txt
-</pre>
 
 <h2></h2> 
 <p>Please
