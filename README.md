@@ -53,7 +53,7 @@ entrances which has almost all entrances of subway stations in NYC.
 2. There are two ways to build the project.
     - Using cmake:
         ```shell
-        mkdir  build  &&  cd  build
+        mkdir build && cd build
         ```
         ```shell
         cmake.. && make
@@ -62,7 +62,10 @@ entrances which has almost all entrances of subway stations in NYC.
         ```shell
         make
         ```
-3. Set PATH to bin: <pre> cd ..  &&  export  PATH=$PATH:$PWD/bin</pre>
+3. Set PATH to bin:
+    ```shell
+         cd .. && export PATH=$PATH:$PWD/bin
+    ```
 4. Execute the program:
     - If the project is build by cmake:
         - To run all the commands in command-file by typing:
@@ -71,7 +74,7 @@ entrances which has almost all entrances of subway stations in NYC.
             ```
         - or run a custom command defined above:
             ``` shell
-            NYCSubwayEntrancesExe [InputFilePath] [CommandFilePath]
+            ./bin/NYCSubwayEntrancesExe [InputFilePath] [CommandFilePath]
             ```
     - If the project is build by make:
         - To run all the commands in command-file by typing:
@@ -79,8 +82,8 @@ entrances which has almost all entrances of subway stations in NYC.
             make run
             ```
         - or run a custom command:
-            ```
-            exe [InputFilePath] [CommandFilePath]
+            ```shell
+            ./bin/exe [InputFilePath] [CommandFilePath]
             ```
 
 
