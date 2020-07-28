@@ -2,8 +2,7 @@
 
 EXE=NYCSubwayEntrancesExe
 IN_FILE=input-files/subwaydata_newstationnames.csv
-nl='
-'
+
 touch temp.txt
 
 #create a temp file for storing commands
@@ -13,12 +12,13 @@ for file in command-files/*; do
     cat $file >> temp.txt
   done
 
-echo $nl
-echo "running these comands:$nl"
+echo
+echo "running these comands:"
+echo
 cat temp.txt
-
+echo
 #execute the program
-echo "reading input-file... $nl"
-$EXE $IN_FILE temp.txt
-
+echo "reading input-file... "
+echo
+./bin/NYCSubwayEntrancesExe $IN_FILE temp.txt
 rm temp.txt

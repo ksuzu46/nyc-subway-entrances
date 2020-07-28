@@ -9,8 +9,8 @@
 
 #ifndef __SUBWAY_PORTAL_H__
 #define __SUBWAY_PORTAL_H__
-#include <sstream>
 
+#include <sstream>
 #include <string>
 #include <vector>
 #include <algorithm>
@@ -22,15 +22,18 @@
 
 using namespace std;
 
-struct Invalid_Portal_Data{
-    string what() const{
+struct Invalid_Portal_Data
+{
+    string what() const
+    {
         return "Invalid Portal Data";
     }
 };
 
 class SubwayStation;
 
-class SubwayPortal{
+class SubwayPortal
+{
     
     public:
     /** subway-portal is a default constructor
@@ -53,13 +56,13 @@ class SubwayPortal{
      * @param: portal
      * @return: this pointer after copying data from other
      */
-    SubwayPortal& operator=(const SubwayPortal& portal);
+    SubwayPortal &operator =(const SubwayPortal &portal);
     
     /** operator=() is move assignment operator
      * @param: portal
      * @return: this pointer after copying data from other
      */
-    SubwayPortal& operator=(SubwayPortal &&portal);
+    SubwayPortal &operator =(SubwayPortal &&portal);
     
     /** distance_from() returns the distance between station and a gps
      *  location
@@ -68,7 +71,7 @@ class SubwayPortal{
      *  @return: double distance between this portal location and the point of
      *  argument
      */
-    double distance_from(double latitude,double longitude) const;
+    double distance_from(double latitude, double longitude) const;
     
     /** distance_between() is a friend function which returns the distance
      *  between tow portals
@@ -76,19 +79,19 @@ class SubwayPortal{
      *  @param: SubwayPortal portal2
      *  @return:
      */
-    friend double distance_between(const SubwayPortal& portal1, const SubwayPortal&
+    friend double
+    distance_between(const SubwayPortal &portal1, const SubwayPortal &
     portal2);
     
-    
     /** returns true if the two portals have the exact same set of routes  */
-    friend bool same_routes(const SubwayPortal& portal1,
-                            const SubwayPortal& portal2);
+    friend bool same_routes(const SubwayPortal &portal1,
+                            const SubwayPortal &portal2);
     
     /** returns true if the two portals belong to the same station */
-    friend bool same_station(const SubwayPortal& portal1,
-                             const SubwayPortal& portal2);
+    friend bool same_station(const SubwayPortal &portal1,
+                             const SubwayPortal &portal2);
     
-    friend ostream &operator<<(ostream &out,const SubwayPortal& e);
+    friend ostream &operator <<(ostream &out, const SubwayPortal &e);
     
     friend class SubwayStation;
     

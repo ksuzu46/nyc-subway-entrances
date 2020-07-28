@@ -1,12 +1,20 @@
-/******************************************************************************
-  Title          : subway_system.h
-  Author         : Keisuke Suzuki
-  Created on     : April 18, 2018
-  Description    : Header file for the subway-system class derives the class
-                   _SubwaySystem
-  Purpose        : To give an interface for subway-system class
-
-******************************************************************************/
+/**
+    subway_system.h
+    @author Keisuke Suzuki
+    @version 1.0 7/28/20
+    Purpose: To define SubwaySystem class
+    
+    License: Copyright (c) 7/28/20 Keisuke Suzuki
+    	This program is free software: you can redistribute it and/or modify
+    	it under the terms of the GNU General Public License as published by
+    	the Free Software Foundation, either version 3 of the License, or
+    	(at your option) any later version.
+  
+    	This program is distributed in the hope that it will be useful,
+    	but WITHOUT ANY WARRANTY; without even the implied warranty of
+    	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    	GNU General Public License for more details
+*/
 
 #ifndef SW2_SUBWAY_SYSTEM_H
 #define SW2_SUBWAY_SYSTEM_H
@@ -25,11 +33,8 @@
 
 using namespace std;
 
-const vector<route_id> ids({"1","2","3","4","5","6","7","A","B","C","D","E","F",
-                            "G","H","I","J","K","L","M","N","O","P","Q","R","S",
-                            "T","U","V","W","X","Y","Z","FS","GS"});
-
-class SubwaySystem :public _SubwaySystem{
+class SubwaySystem: public _SubwaySystem
+{
     public:
     /** default constructor it initialize all the members in the class */
     SubwaySystem();
@@ -43,7 +48,7 @@ class SubwaySystem :public _SubwaySystem{
      * @param other
      * @return pointer of this pointer
      */
-    SubwaySystem &operator=(const SubwaySystem &other);
+    SubwaySystem &operator =(const SubwaySystem &other);
     
     /** add_portal()  adds the given portal to the array of portals
      *  It also creates a hash table entry for this portal that points to
@@ -51,7 +56,7 @@ class SubwaySystem :public _SubwaySystem{
      *  @param  SubwayPortal [in] portal: an initialized portal
      *  @return int  1 if successful, 0 if portal is not added.
      */
-    int add_portal(const SubwayPortal& portal);
+    int add_portal(const SubwayPortal &portal);
     
     /** list_all_stations() lists all subway station names on the given stream
      *  @param [inout] ostream out is an open output stream
@@ -64,7 +69,7 @@ class SubwaySystem :public _SubwaySystem{
      *          which must be the name of the set of portal names. These can
      *          be obtained from the output of list_all_stations().
      */
-    void list_all_portals(ostream &out,string station_name) const;
+    void list_all_portals(ostream &out, string station_name) const;
     
     /** list_stations_of_route() lists all station names on the given route on
      *          the given output stream
@@ -72,8 +77,7 @@ class SubwaySystem :public _SubwaySystem{
      *  @param [in]  route_id route is the name of the subway route whose
      *          stations are to be printed onto the stream
      */
-    void list_stations_of_route(ostream &out,const route_id& route) const;
-    
+    void list_stations_of_route(ostream &out, const route_id &route) const;
     
     /** form_stations()
      *  Note: form_stations should be called once after the array of portals
@@ -94,8 +98,7 @@ class SubwaySystem :public _SubwaySystem{
      *         if it is found, or is an empty Portal whose name is ""
      *  @return bool true if anf only if the portal is found
      */
-    bool get_portal(string name_to_find,SubwayPortal &portal) const;
-    
+    bool get_portal(string name_to_find, SubwayPortal &portal) const;
     
     /** nearest_portal() returns a string representation of the portal that
      *  is nearest to the given point
@@ -103,7 +106,7 @@ class SubwaySystem :public _SubwaySystem{
      *  @param  double [in]  longitude of point
      *  @return string       portal's name (as defined in subway_portal.h)
      */
-    string nearest_portal(double latitude,double longitude) const;
+    string nearest_portal(double latitude, double longitude) const;
     
     /** nearest_routes() returns a string representation of the routes that
      *  are nearest to the given point
@@ -111,7 +114,7 @@ class SubwaySystem :public _SubwaySystem{
      *  @param  double [in]  longitude of point
      *  @return string       representation of set of routes
      */
-    string nearest_routes(double latitude,double longitude) const;
+    string nearest_routes(double latitude, double longitude) const;
     
     /** union_set() it sets parent node of root2 to root1
      * @param root1
@@ -119,7 +122,7 @@ class SubwaySystem :public _SubwaySystem{
      * @precondition: root1 and root2 is the root of the parent tree
      * @postcondition: root2 is child of root1
      */
-    void union_set(size_t root1,size_t root2);
+    void union_set(size_t root1, size_t root2);
     
     /** find() it sets parent node of root2 to root1
      * @param int: i
@@ -129,14 +132,13 @@ class SubwaySystem :public _SubwaySystem{
     int find(int i);
     
     private:
-    vector<SubwayStation> stations;
-    HashTable portal_table;
-    HashTable station_table;
-    vector<SubwayRoute> routes;
+    vector <SubwayStation> stations;
     
+    HashTable portal_table;
+    
+    HashTable station_table;
+    
+    vector <SubwayRoute> routes;
 };
-
-
-
 
 #endif //SW2_SUBWAY_SYSTEM_H

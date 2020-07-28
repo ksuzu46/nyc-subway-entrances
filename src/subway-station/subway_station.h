@@ -1,12 +1,20 @@
-/******************************************************************************
-  Title          : subway_station.h
-  Author         : Keisuke Suzuki
-  Created on     : April 18, 2018
-  Description    : Interface file for subway-station class
-  Purpose        : Interface for subway-station class which interacts with
-                   the main program
-                   
-******************************************************************************/
+/**
+    subway_station.h
+    @author Keisuke Suzuki
+    @version 1.0 7/28/20
+    Purpose: To Define SubwayStation class
+    
+    License: Copyright (c) 7/28/20 Keisuke Suzuki
+    	This program is free software: you can redistribute it and/or modify
+    	it under the terms of the GNU General Public License as published by
+    	the Free Software Foundation, either version 3 of the License, or
+    	(at your option) any later version.
+  
+    	This program is distributed in the hope that it will be useful,
+    	but WITHOUT ANY WARRANTY; without even the implied warranty of
+    	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    	GNU General Public License for more details
+*/
 
 #ifndef SW2_SUBWAY_STATION_H
 #define SW2_SUBWAY_STATION_H
@@ -16,9 +24,8 @@
 
 #include <set>
 
-
-
-class SubwayStation{
+class SubwayStation
+{
     public:
     /** subway-station() is a default constructor which initializes any
       * private members with suitable default values.
@@ -29,13 +36,13 @@ class SubwayStation{
       * from a portal and makes the portal embedded portal of this station
       * @param SubwayPortal portal
       */
-    explicit SubwayStation(const SubwayPortal& portal);
+    explicit SubwayStation(const SubwayPortal &portal);
     
     /** operator=() is a assignment operator
      *  @param other
      *  @return
      */
-    SubwayStation& operator=(const SubwayStation &other);
+    SubwayStation &operator =(const SubwayStation &other);
     
     /** set_parent() sets the parent id of the station
      *  @param int [in] the id of the parent
@@ -53,7 +60,7 @@ class SubwayStation{
      *  @return bool true iff s1 and s2 are connected according to rules defined
      *  in the assignment specification
      */
-    friend bool connected(const SubwayStation& s1,const SubwayStation& s2);
+    friend bool connected(const SubwayStation &s1, const SubwayStation &s2);
     
     /** add_station_name() adds a new name to station
      *  @Note: It does not add a name if it is already in the set of names for
@@ -61,7 +68,7 @@ class SubwayStation{
      *  @param string [in] new name is name to be added
      *  @return 1 if name is added and 0 if not
      */
-    int add_station_name(const string& newname);
+    int add_station_name(const string &newname);
     
     /** names() returns a list of the names of the station as a list of strings
      */
@@ -95,7 +102,7 @@ class SubwayStation{
     
     private:
     int m_parent_id;                       //parent id for the integer
-    set<string> m_station_names;           //set of station names
+    set <string> m_station_names;           //set of station names
     string m_primary_name;                 //first station name stored in set
     list<int> children;                    //indexes of children
     string portal_unique_name;             //embedded portal name

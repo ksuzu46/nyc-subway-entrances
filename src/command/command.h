@@ -51,7 +51,7 @@ typedef enum
     bad_cmmd,
     null_cmmd,
     num_Command_types
-} Command_type;
+}Command_type;
 
 /*******************************************************************************
                               Command Class Interface
@@ -59,11 +59,11 @@ typedef enum
 
 class Command
 {
-public:
+    public:
     /** Command()  A default constructor for the class
      */
-    Command ();
-
+    Command();
+    
     /** get_next(istream & in) resets the values of the command object on
      * which it is called to the values found at the current read pointer of
      * the istream in, provided in.eof() is false.
@@ -79,16 +79,16 @@ public:
      * @return true if the command was initialized to something other than a
      *        bad_command, and false otherwise.
      */
-    bool get_next (istream & in );
-
+    bool get_next(istream &in);
+    
     /** typeof() returns the type of the Command on which it is called.
      * @pre  None
      * @post None, as this is a const method
      * @return A value of Command_type, depending on the type of the command
              object.
      */
-    Command_type type_of () const;
-
+    Command_type type_of() const;
+    
     /** args() sets the values of its parameters to the argument values of
      * the Command object on which it is called. If the Command object is a
      * bad_command or null command then the result is set to false and the
@@ -106,23 +106,28 @@ public:
      * @post Either result == false or all members are
      *       set to the values in the object.
      */
-    void  get_args (
-                string       & arg_route_identifier,
-                string       & arg_station_name,
-                string       & arg_portal_name,
-                double       & arg_longitude,
-                double       & arg_latitude,
-                bool         & result
-                ) const;
-
-private:
+    void get_args(
+        string &arg_route_identifier,
+        string &arg_station_name,
+        string &arg_portal_name,
+        double &arg_longitude,
+        double &arg_latitude,
+        bool &result
+    ) const;
+    
+    private:
     Command_type type;       // The type of the Command object
-    string       route_id;
-    string       station_name;
-    string       portal_name;
-    double       longitude{};
-    double       latitude{};
-    double       distance{};
+    string route_id;
+    
+    string station_name;
+    
+    string portal_name;
+    
+    double longitude{};
+    
+    double latitude{};
+    
+    double distance{};
 };
 
 #endif /* __COMMAND_H__ */

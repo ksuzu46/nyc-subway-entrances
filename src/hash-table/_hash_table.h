@@ -24,7 +24,8 @@ using namespace std;
 // resized, but you might want to implement resizing in your class.
 #define INITIAL_SIZE 4096
 
-class __HashTable{
+class __HashTable
+{
     public:
     
     /** find() searches in table for given item
@@ -67,9 +68,7 @@ class __HashTable{
      *  @param  ostream [in,out] the stream onto which items are written
      *  @return int the number of items written to the stream
      */
-    virtual int listall ( ostream & os ) const = 0;
-    
-    
+    virtual int listall(ostream &os) const = 0;
 };
 
 #endif /* __HASH_TABLE_H__ */
